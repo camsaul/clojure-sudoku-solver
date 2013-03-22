@@ -1,3 +1,6 @@
+(ns solver
+  (:use [clojure.set :as set]))
+
 (def rows (range 0 81))
 (def cols (apply interleave (partition 9 rows)))
 (def squares (letfn  [(sq-index [i] [(quot (quot i 9) 3) (quot (rem i 9) 3)])]
